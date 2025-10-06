@@ -44,7 +44,6 @@ public class BootService : IHostedService
 
     public Task StopAsync(CancellationToken cancellationToken)
     {
-        _configurationService.Save(_configuration);
         return Task.CompletedTask;
     }
 }
