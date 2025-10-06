@@ -17,7 +17,7 @@ namespace KubeCheck
 
         static async Task Main(string[] args)
         {
-            var configFilePath = Environment.GetEnvironmentVariable("CONFIG_PATH") ?? "/app/config";
+            var configFilePath = Environment.GetEnvironmentVariable("CONFIG_PATH") ?? "/config";
             var logLevelString = Environment.GetEnvironmentVariable("LOG_LEVEL") ?? "Information";
             var kubeConfigPath = Environment.GetEnvironmentVariable("KUBECONFIG") ?? null;
             if (!Enum.TryParse<LogLevel>(logLevelString, out var logLevel))
